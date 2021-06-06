@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block content %}
+<style>
+    body{
+        background-image:url({{url_for('static',filename='trai.png')}});
+        padding: 0 100px;
+        height: 100wh;
+        display: flex;
+        justify-content: center;
+        background-size: 1370px 720px;
+    }
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+<form action="#" method="post">
+    <button type="submit" name="train" value="data" class="btn btn-success btn-lg center">Train Data</button>
+</form>
+<br>
+{% if msg %}
+<div class="alert alert-primary text-bottom" role="alert" >{{ msg }}</div>
+{%endif%}
+
+{% endblock content%}

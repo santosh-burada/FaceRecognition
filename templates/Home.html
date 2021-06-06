@@ -1,0 +1,128 @@
+{% extends 'layout.html' %}
+{% block content %}
+<style>
+    body{
+        background-image:url({{url_for('static',filename='stuback.jpg')}});
+        padding: 0 100px;
+        height: 100wh;
+        display: flex;
+        justify-content: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+</style>
+<div class="container">
+    <div class="container">
+        <div class="py-1 text-center">
+            <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='Stu.png') }}">
+            <h2>Student Registration</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <h6><label class="text-primary">Name</label></h6>
+                        <input type="text" class="form-control" name="name" placeholder="Jem" required>
+                    </div>
+
+                    <div class="form-group">
+                        <h6><label class="text-primary">Roll Number</label></h6>
+                        <input type="text" class="form-control" name="roll" placeholder="17341A1207" required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <h6><label class="text-primary">Email address</label></h6>
+                        <input type="email" class="form-control" name="email" placeholder="Jem@email.com"
+                               aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <h6><label class="text-primary">Address </label></h6>
+                        <input type="text" class="form-control" name="address" placeholder="1234 Main St" required>
+                        <small class="form-text text-muted">Street Address</small>
+                    </div>
+
+                    <div class="form-group">
+                        <h6><label class="text-primary">Phone Number</label></h6>
+                        <input type="number" class="form-control" name="phone" placeholder="1234 Main St" required>
+
+                    </div>
+
+                    <div class="form-group">
+                        <h6><label class="text-primary">Mentor Name</label></h6>
+                        <input type="text" class="form-control" name="mentor" placeholder="1234 Main St" required>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <h6><label class="text-primary">Department</label></h6>
+                            <select class="custom-select d-block w-100" name="dep" required>
+                                <option value="">Choose...</option>
+                                <option>CSE</option>
+                                <option>IT</option>
+                                <option>ECE</option>
+                                <option>MEC</option>
+                                <option>EEE</option>
+                                <option>CHE</option>
+                                <option>POW</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6><label class="text-primary">Semester</label></h6>
+                            <select class="custom-select d-block w-100" name="sem" required>
+                                <option value="">Choose...</option>
+                                <option>1st</option>
+                                <option>2st</option>
+                                <option>3st</option>
+                                <option>4st</option>
+                                <option>5st</option>
+                                <option>6st</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6><label class="text-primary">Gender</label></h6>
+                            <select class="custom-select d-block w-100" name="gender" required>
+                                <option value="">Choose...</option>
+                                <option>Male</option>
+                                <option>Female</option>
+
+                            </select>
+
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6><label class="text-primary">Batch</label></h6>
+                            <input type="text" class="form-control" name="batch" placeholder="Join in which Year"
+                                   required>
+                        </div>
+
+
+                    </div>
+                    <hr class="mb-4">
+                    <button type="submit" name="upload" value="extract" class="btn btn-primary btn-lg btn-block">Submit
+                        by Uploading Photos of the Student
+                    </button>
+                    <hr class="mb-4">
+                    <div class="msg">{{ msg }}</div>
+                </form>
+
+            </div>
+        </div>
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; Santosh Burada</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/santosh-burada-1171881aa/">LinkedIn</a></li>
+                <li class="list-inline-item"><a href="https://github.com/santosh-burada">Github</a></li>
+            </ul>
+        </footer>
+    </div>
+</div>
+{% endblock content %}

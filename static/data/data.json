@@ -1,0 +1,16 @@
+{
+  "people": [
+    {
+      "Name": "Santosh Burada",
+      "Id": "17341A1207",
+      "Email": "santu.burada99@gmail.com",
+      "Phone": "6303149161",
+      "Address": "Rajam",
+      "Mentor": "Abhi",
+      "Department": "IT",
+      "Semester": "6st",
+      "Gender": "Male",
+      "Batch": "2017"
+    }
+  ]
+}

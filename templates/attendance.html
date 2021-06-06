@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+  <style>
+    body{
+        background-image:url({{url_for('static',filename='trai.png')}});
+        padding: 0 100px;
+        height: 100wh;
+        display: flex;
+        justify-content: center;
+        background-size: 1370px 720px;
+    }
+</style>
+
+<h1 class="text-success">Attendance</h1>
+{% if output==1%}
+<div>{{output}}</div>
+{%else%}
+<img src="{{ url_for('video') }}" width="50%">
+{%endif%}
+
+
+<a href="{{url_for('download_file')}}" class="btn btn-primary btn-lg active text-center float-right" role="button"
+   aria-pressed="true">Download Attendance</a>
+<form action="#" method="post">
+    <button type="submit" name="stop" class="btn btn-primary">Stop</button>
+</form>
+
+{% endblock content%}
